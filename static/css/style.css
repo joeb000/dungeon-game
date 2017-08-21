@@ -1,0 +1,149 @@
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+
+/* spacers */
+.pd {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.pd-md {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+
+/* typography */
+h3, h2, h4 {
+    font-weight: 800;
+}
+
+
+/* sections */
+.section-dark {
+    background-color: 313131;
+}
+section {
+    padding-top: 7em;
+    padding-bottom: 7em;
+    
+}
+.section-dark h2, .section-dark h3, .section-dark p, .section-dark h1, .section-dark label {
+color: white;
+}
+
+/* buttons */
+.btn {
+    background-color: FF3030;  
+    width: 100%; 
+    color: white;
+    font-weight: 600;
+}
+.btn:hover {
+    background-color: FC7171;
+}
+.fight-button {
+    background-color: FF3030;  
+    width: 100%; 
+    color: white;
+    font-weight: 600;
+    font-size: 30px;
+    height: 80px;
+}
+/* fighting areas */
+.fighter-box {
+    min-height: 400px;
+    /* background-color: D5F9EA; */
+    border-radius: 10%;
+    
+}
+.combat-box {
+    /* background-color: FFA0A0; */
+    height: 350px;
+    
+    border-radius: 10%;
+}
+
+
+img {
+    width: 150px;
+    border: solid 2px white;
+    border-radius: 5px;;
+}
+
+#f1_name, #f1_hitpoints, #f2_name, #f2_hitpoints {
+    height: 60px;
+   font-size: 40px;
+}
+#f1_name, #f2_name {
+    text-transform: uppercase;
+    color: FFD107;
+}
+#f1_hitpoints, #f2_hitpoints {
+    color: #00FF00;
+       
+}
+#f1_attack, #f2_attack {
+    height: 50px;
+    
+    color: white;
+}
+ input {
+    width: 50%;
+    height: 50px;
+    font-size: 35px;
+}
+label {
+    
+    font-size: 24px;
+    width: 230px;
+}
+.game-area {
+    /* background-color: E2ECE7; */
+    border-radius:10px;
+}
+
+.fight-zone {
+  padding: 100px;
+}
+.zone {
+   
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+}
+
+#fighter2_result, #fighter1_result {
+    height: 60px;
+   font-size: 40px;
+   text-transform: uppercase;
+    color: FFD107;
+}
+
+/* thorwing sword */
+
+#sword {
+    
+    position: relative;
+    border: none;
+    top:-280px;
+    left: 90px;
+    height: 100px;
+    width: 100px;
+  
+    
+}
+#sword2 {
+    
+    
+    position: relative;
+    border: none;
+    top:-280px;
+    left: 745px;
+    height: 100px;
+    width: 100px;
+   
+    
+}
