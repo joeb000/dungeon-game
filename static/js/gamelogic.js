@@ -47,32 +47,39 @@ function getRandomInt(min, max) {
 
 //fight
 function rollDice() { 
+
+  //make swords move
   move();
 
   $('.gladiator1, .gladiator2').animateCss('swing');
-  
 
+  //check to see if game has ended
   gameCheck();
+  // combat sounds
   grunt.play();
   
-  fighter1.attack = getRandomInt(0, 50);
-  fighter2.attack = getRandomInt(0, 50);
-  
+  //get attack values
+  fighter1.attack = getRandomInt(0, 40);
+  fighter2.attack = getRandomInt(0, 40);
 
-  document.getElementById("f1_attack").innerHTML =  fighter1.name + "<br>" + " hits for: " +  fighter1.attack;
-  document.getElementById("f2_attack").innerHTML =  fighter2.name + "<br>" + " hits for: " +  fighter2.attack;
-
-  console.log("fighter1 has dealt " + fighter1.attack + " damage");
-  console.log("fighter2 has dealt " + fighter2.attack + " damage");
+  if (fighter1.attack == 0 ) {
+    document.getElementById("f1_attack").innerHTML =
+      fighter1.name + "<br>" + " has missed! ";
+  }
+  else if (fighter2.attack == 0) {
+      document.getElementById("f2_attack").innerHTML =
+      fighter2.name + "<br>" + " has missed! ";
+  }
+    else {
+    document.getElementById("f1_attack").innerHTML =  fighter1.name + "<br>" + " hits for: " +  fighter1.attack;
+    document.getElementById("f2_attack").innerHTML =  fighter2.name + "<br>" + " hits for: " +  fighter2.attack;
+  }
   
+  //display attack values on page
+  
+ 
   fighter1.hitpoints -= fighter2.attack;
   fighter2.hitpoints -= fighter1.attack;
-
-  
-  //updateFighterValues();
-  console.log("updating...")
-  console.log(fighter1);
-  console.log(fighter2);
 
   $('#f1_hitpoints').text(fighter1.hitpoints)
   $('#f2_hitpoints').text(fighter2.hitpoints)
@@ -84,44 +91,40 @@ function rollDice() {
 function gameCheck() { 
 
   //if both lose
-  if (fighter2.hitpoints <= 0 && fighter1.hitpoints <= 0) { 
-    deadSound.play()
-    
-    document.getElementById("f1_hitpoints").value=""
-    document.getElementById("f2_hitpoints").value=""
-    document.getElementById("fighter2_result").innerHTML = fighter2.name + " and " + fighter1.name + " Has Lost!";
+    if (fighter2.hitpoints <= 0 && fighter1.hitpoints <= 0) { 
+      deadSound.play()
+      
+      document.getElementById("f1_hitpoints").value=""
+      document.getElementById("f2_hitpoints").value=""
+      document.getElementById("fighter2_result").innerHTML = fighter2.name + " and " + fighter1.name + " Has Lost!";
 
-    $('.gladiator2, .gladiator1').animateCss('hinge');
-    $('#sword2, #sword').animateCss('zoomOutDown');
+      $('.gladiator2, .gladiator1').animateCss('hinge');
+      $('#sword2, #sword').animateCss('zoomOutDown');
 
-    setTimeout(function() {  
-      $('.gladiator2, .sword2, sword').addClass('invisible');   
-      location.reload();     
-      confirm("Game is Over, " + fighter2.name + " and " + fighter1.name + " have lost. Click OK to reset.");    
-  }, animationTimer); 
-
+      setTimeout(function() {  
+        $('.gladiator2, .sword2, sword').addClass('invisible');   
+        location.reload();     
+        confirm("Game is Over, " + fighter2.name + " and " + fighter1.name + " have lost. Click OK to reset.");    
+    }, animationTimer); 
   }
 
   //-------------------------------------------------------------------------
 
-  else if (fighter1.hitpoints <= 0) {
-    deadSound.play()
-    $('.sword2').addClass('invisible');
-    document.getElementById("f1_hitpoints").value=""
-    document.getElementById("f2_hitpoints").value=""
-    document.getElementById("fighter1_result").innerHTML = fighter1.name + " Has Lost!";
-    
-    $('.gladiator1').animateCss('hinge');
-    //$('.gladiator2').animateCss('bounce');
-    $('#sword2').animateCss('zoomOutDown');
-
-    setTimeout(function() {
+    else if (fighter1.hitpoints <= 0) {
+      deadSound.play()
+      $('.sword2').addClass('invisible');
+      $('#f1_hitpoints, #f2_hitpoints ').val("");
       
-      $('.gladiator1').addClass('invisible'); 
-      location.reload();
-      confirm("Game is Over, " + fighter1.name + " has lost.  Click OK to reset");     
-  }, animationTimer);
-  
+      document.getElementById("fighter1_result").innerHTML = fighter1.name + " Has Lost!";
+      
+      $('.gladiator1').animateCss('hinge');     
+      $('#sword2').animateCss('zoomOutDown');
+
+      setTimeout(function() {       
+        $('#gladiator1').addClass('invisible'); 
+        location.reload();
+        confirm("Game is Over, " + fighter1.name + " has lost.  Click OK to reset");     
+    }, animationTimer);   
   }
 
 //----------------------------------------------------------------------
@@ -133,12 +136,11 @@ function gameCheck() {
     document.getElementById("f2_hitpoints").value=""
     document.getElementById("fighter2_result").innerHTML = fighter2.name + " Has Lost!";  
 
-    $('.gladiator2').animateCss('hinge');
+    $('#gladiator2').animateCss('hinge');
     //$('.gladiator1').animateCss('bounce');
     $('#sword').animateCss('zoomOutDown');
 
-    setTimeout(function() {
-      
+    setTimeout(function() {      
       $('.gladiator2').addClass('invisible');
       location.reload();
       confirm("Game is Over, " + fighter2.name + " has lost.  Click OK to reset");    
@@ -152,36 +154,28 @@ var check = 2;
 
 //update values
 function updateFighterValues() {
-  $('#sword, #sword2').removeClass('invisible');
 
-  scrollWin();
+$('#sword, #sword2').removeClass('invisible');
 
- if (check == 2) { 
-  fighter1.name = document.getElementById("fighter1_name").value;
-  fighter2.name = document.getElementById("fighter2_name").value;
-  document.getElementById("fighter1_name").value="";
-  document.getElementById("fighter2_name").value="";
- }
+if (check == 2) { 
+fighter1.name = document.getElementById("fighter1_name").value;
+fighter2.name = document.getElementById("fighter2_name").value;
+$('#fighter1_name, #fighter2_name').val("");
+$('.gladiator1, .gladiator2').removeClass('invisible').animateCss('rollIn');
+scrollWin();    
+  check++;
+}
 
   //show fight button
   $('.fight-button').removeClass('invisible');
-
-  //bring in images only once
-if (check == 2) {
-    $('.gladiator1').removeClass('invisible').animateCss('rollIn');
-    $('.gladiator2').removeClass('invisible').animateCss('rollIn');
-    check++;
-}
-
+  //update during fight
   $('#f1_name').text(fighter1.name)
   $('#f1_attack').text(fighter1.attack)
   $('#f1_hitpoints').text(fighter1.hitpoints)
   $('#f2_name').text(fighter2.name)
   $('#f2_attack').text(fighter2.attack)
-  $('#f2_hitpoints').text(fighter2.hitpoints)
-  
+  $('#f2_hitpoints').text(fighter2.hitpoints) 
 }
-
 
 function move(){
   $('#sword, #sword2').animateCss('tada'); 

@@ -16,6 +16,7 @@
 
     <!-- style -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
     <!-- fonts -->
@@ -53,52 +54,48 @@
 
         <!-- fighter box left -->
     </div>
-        </section>
-    <section class="section-dark">
-            <div class="container">
-                
-                <h1 class="text-center">BATTLE ZONE</h1>
+</section>
+
+
+<section class="section-dark">
+    <div class="container">
+    <h1 class="text-center">BATTLE ZONE</h1>
         <div class="zone">
-        <div class="row pd text-center ">
-          
-            <div class="col-md-4 fighter-box">
-                <h2 class="heading pd">Fighter 1: </h2>
-                <h3 id="f1_name"></h3>
-                <h3 id="f1_hitpoints"></h3>
-                <div class="pd gladiator1 invisible"><img class="" src="img/glad1.jpg"></div>
-                <h4 id="fighter1_result"></h4>
+            <div class="row pd text-center ">            
+                <div class="col-4 fighter-box">
+                    <h2 class="heading pd">Fighter 1: </h2>
+                    <h3 id="f1_name"></h3>
+                    <h3 id="f1_hitpoints"></h3>
+                    <div id="gladiator1" class="pd gladiator1 invisible"><img class="" src="img/glad1.jpg"></div>
+                    <h4 id="fighter1_result"></h4>
+                </div>
+
+                <!-- combat box -->
+                <div class="col-4  combat-box text-center">
+                    <h2 class="heading pd">Attacks </h2>
+                    <p id=""></p>
+                    <h4 id="f1_attack"></h4>
+                    <h4 id="f2_attack"></h4>
+                    <div class="col-md-12 pd">
+                        <button class="btn btn-lg invisible fight-button" onclick="rollDice();">Fight</button>
+                    </div>               
+                </div>
+
+                <!-- fighter box right -->
+                <div class="col-4 fighter-box">
+                    <h2 class="heading pd">Fighter 2: </h2>
+                    <h3 id="f2_name"></h3>
+                    <h3 id="f2_hitpoints"></h3>
+                    <div id="gladiator2" class="pd gladiator2 invisible"><img class="" src="img/glad2.jpg"></div>
+                    <h4 id="fighter2_result"></h4>
+                </div>           
             </div>
 
-            <!-- combat box -->
-            <div class="col-md-4  combat-box text-center">
-                <h2 class="heading pd">Attacks </h2>
-                <p id=""></p>
-                <h4 id="f1_attack"></h4>
-                <h4 id="f2_attack"></h4>
-
-                <div class="col-md-12 pd">
-                    <button class="btn btn-lg invisible fight-button" onclick="rollDice();">Fight</button>
-                </div>               
-            </div>
-
-            <!-- fighter box right -->
-            <div class="col-md-4 fighter-box">
-                <h2 class="heading pd">Fighter 2: </h2>
-                <h3 id="f2_name"></h3>
-                <h3 id="f2_hitpoints"></h3>
-                <div class="pd gladiator2 invisible"><img class="" src="img/glad2.jpg"></div>
-                <h4 id="fighter2_result"></h4>
-            </div>
-
-        
-        </div>
-
-        <img class="invisible sword" id="sword"  src="img/throw.png">        
-        <img class="invisible sword2" id="sword2" src="img/throw.png">
+            <img class="invisible sword" id="sword"  src="img/throw.png">        
+            <img class="invisible sword2" id="sword2" src="img/throw.png">
 
         </div>
-    </div>
-    
+    </div>    
 </section>     
             
 

@@ -1,0 +1,36 @@
+@media (max-width: 414px) {
+    img {
+        width: 90px;
+    }
+    #sword {
+        height: 50px;
+        width: 50px;
+        left: 0;
+        top: -200px;
+    }
+    #sword2 {
+        height: 50px;
+        width: 50px;
+        left: 224px;
+        top: -200px;
+    }
+    input {
+        width: 100%;
+        font-size: 22px;
+    }
+    .btn {
+        font-size: 22px;
+    }
+    h3 {
+       font-size: 24px !important; 
+    }
+    h2 {
+        font-size: 26px !important;
+    }
+    p {
+        font-size: 14px !important;
+    }
+    h4 {
+        font-size: 18px !important;
+    }
+}

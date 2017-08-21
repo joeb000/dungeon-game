@@ -120,30 +120,24 @@ label {
    font-size: 40px;
    text-transform: uppercase;
     color: FFD107;
+    z-index: 100000;
 }
 
 /* thorwing sword */
 
-#sword {
-    
+#sword {   
     position: relative;
     border: none;
     top:-280px;
     left: 90px;
     height: 100px;
-    width: 100px;
-  
-    
+    width: 100px;    
 }
-#sword2 {
-    
-    
+#sword2 {     
     position: relative;
     border: none;
     top:-280px;
     left: 745px;
     height: 100px;
-    width: 100px;
-   
-    
+    width: 100px;     
 }
