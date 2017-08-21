@@ -2,6 +2,18 @@
     img {
         width: 90px;
     }
+    .fighter-card {
+        width: 60px;
+        
+    }
+    .fighter-names {
+    height: 50px;
+   
+    }
+    .fighter-name-section {
+        padding-bottom: 2.3em;
+    padding-top: 2.6em;
+    }
     #sword {
         height: 50px;
         width: 50px;

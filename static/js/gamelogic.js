@@ -149,7 +149,7 @@ function gameCheck() {
   }
 }
   
-
+//prevent repetition
 var check = 2;
 
 //update values
@@ -157,13 +157,14 @@ function updateFighterValues() {
 
 $('#sword, #sword2').removeClass('invisible');
 
+//do only once - the first time
 if (check == 2) { 
 fighter1.name = document.getElementById("fighter1_name").value;
 fighter2.name = document.getElementById("fighter2_name").value;
 $('#fighter1_name, #fighter2_name').val("");
 $('.gladiator1, .gladiator2').removeClass('invisible').animateCss('rollIn');
 scrollWin();    
-  check++;
+check++;
 }
 
   //show fight button
@@ -184,5 +185,83 @@ function move(){
 
 function scrollWin() {
     window.scrollBy(0, 800);
+}
+
+//display fighter names on mouseover
+function showName(name) {
+  
+  if (name == "bob") {
+    $('#display-name').text('Bob');
+  }
+  else if (name == "mike") {
+    $('#display-name').text('Mike');
+  }
+  else if (name == "frank") {
+    $('#display-name').text('Frank');
+  }
+  else if (name == "detlev") {
+    $('#display-name').text('Detlev');
+  }
+  else if (name == "detlev") {
+    $('#display-name').text('Detlev');
+  }
+  else if (name == "swen") {
+    $('#display-name').text('Swen');
+  }
+  else if (name == "tim") {
+    $('#display-name').text('Tim');
+  }
+  else if (name == "ruben") {
+    $('#display-name').text('Ruben');
+  }
+  else if (name == "leela") {
+    $('#display-name').text('Leela');
+  }
+  else if (name == "karl") {
+    $('#display-name').text('Karl');
+  }
+  else if (name == "habib") {
+    $('#display-name').text('Habib');
+  }
+  else if (name == "tony") {
+    $('#display-name').text('Tony');
+  }
+  else if (name == "percival") {
+    $('#display-name').text('Percival');
+  }
+  else if (name == "manuel") {
+    $('#display-name').text('Manuel');
+  }
+  else if (name == "sarina") {
+    $('#display-name').text('Sarina');
+  }
+  else if (name == "trevor") {
+    $('#display-name').text('Trevor');
+  }
+  else if (name == "bertram") {
+    $('#display-name').text('Bertram');
+  }
+  else if (name == "lars") {
+    $('#display-name').text('Lars');
+  }
+  else if (name == "james") {
+    $('#display-name').text('James');
+  }
+ 
+}
+function clearName() {  
+  $('#display-name').text("");
+}
+function clearFighterInputs(){
+  $('#fighter1_name').val('');
+  $('#fighter2_name').val('');
+}
+
+function selectFighter(name) {
+  if ($('#fighter1_name').val()) {
+    $('#fighter2_name').val(name);
+  } else {
+    $('#fighter1_name').val(name);
+  }
 }
 

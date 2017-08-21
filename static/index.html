@@ -27,35 +27,170 @@
 <section class="">
     <div class="container">
         
-
+        <div class="row pd-md">
+            <div class="col-md-12 text-center">
         <h1 class="pd text-center">WELCOME TO DUNGEON FIGHTER</h1><br>
-        <h2>ENTER FIGHTER NAMES:</h2>           
-            
+        <h2>SELECT THE FIGHTERS</h2>           
+        </div>  
+    </div> 
         <!-- enter fighter names -->
         <div class="row pd game-area">
-
-            <div class="col-md-12">
-                <label for="fighter1_name">Fighter 1 Name</label><br>
-                <input id="fighter1_name" autofocus required>
+            <div class="col-md-6">
+                <div class="col-md-12">
+                    <label for="fighter1_name">Fighter 1 Name</label><br>
+                    <input id="fighter1_name" autofocus required disabled>
+                </div>                 
+                <div class="col-md-12 pd-md">
+                    <label for="fighter2_name">Fighter 2 Name</label><br>
+                    <input id="fighter2_name" required disabled>
+                </div>
+                    <br><br>
+                <div class="col-md-12 pd-md">
+                    <div class="row">
+                    <div class="col-md-6">
+                        <button onclick="clearFighterInputs();" type="submit" class="btn btn-lg btn-info ">Clear</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button onclick="updateFighterValues();" type="submit" class="btn btn-lg ">Enter</button>
+                    </div>
+                    
+                    </div>
+                    
+                    
+                </div>
             </div>
-        
-            
-            <div class="col-md-12 pd-md">
-                <label for="fighter2_name">Fighter 2 Name</label><br>
-                <input id="fighter2_name" required>
+            <div id="fighter-section" class="col-md-6 col-sm-12">
+                <div class="row">
+                    <div class="col-2 ">
+                            <button onclick="selectFighter('Bob');" id="bob" onmouseover="showName('bob');" onmouseout="clearName();" class="fighter-card-btn" href="#" onclick="">
+                                <img onmouseover="$(this).animateCss('pulse');" class="fighter-card" src="img/glad1.jpg">
+                            </button>
+                    </div>
+                    <div class="col-2 ">
+                            <button onclick="selectFighter('Mike')" id="mike" onmouseover="showName('mike');" onmouseout="clearName();" class="fighter-card-btn" href="#" onclick="">
+                                <img onmouseover="$(this).animateCss('pulse');" class="fighter-card" src="img/glad10.jpg">
+                            </button> 
+                    </div>
+                    <div class="col-2 ">
+                            <button onclick="selectFighter('Frank')" id="frank" onmouseover="showName('frank');" onmouseout="clearName();" class="fighter-card-btn" href="#" onclick="">
+                                <img onmouseover="$(this).animateCss('pulse');" class="fighter-card" src="img/glad3.jpg">
+                            </button>
+                    </div>
+                    <div class="col-2 ">
+                            <button onclick="selectFighter('Detlev')" id="detlev" onmouseover="showName('detlev');" onmouseout="clearName();" class="fighter-card-btn" href="#" onclick="">
+                                <img onmouseover="$(this).animateCss('pulse');" class="fighter-card" src="img/glad4.jpg">
+                            </button>
+                    </div>
+                    <div class="col-2 ">
+                            <button onclick="selectFighter('Swen')" id="swen" onmouseover="showName('swen');" onmouseout="clearName();" class="fighter-card-btn" href="#" onclick="">
+                                <img onmouseover="$(this).animateCss('pulse');" class="fighter-card" src="img/glad5.jpg">
+                            </button>
+                    </div>
+                    <div class="col-2 ">
+                            <button onclick="selectFighter('Tim')" id="tim" onmouseover="showName('tim');" onmouseout="clearName();" class="fighter-card-btn" href="#" onclick="">
+                                <img onmouseover="$(this).animateCss('pulse');" class="fighter-card" src="img/glad6.jpg">
+                            </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2 ">
+                            <button onclick="selectFighter('Ruben')" id="ruben" onmouseover="showName('ruben');" onmouseout="clearName();" class="fighter-card-btn" href="#" onclick="">
+                                <img onmouseover="$(this).animateCss('pulse');" class="fighter-card" src="img/glad7.jpg">
+                            </button>
+                    </div>
+                    <div class="col-2 ">
+                            <button onclick="selectFighter('Leela')" id="leela" onmouseover="showName('leela');" onmouseout="clearName();" class="fighter-card-btn" href="#" onclick="">
+                                <img onmouseover="$(this).animateCss('pulse');" class="fighter-card" src="img/glad8.jpg">
+                            </button>
+                    </div>
+                    <div class="col-2 ">
+                            <button onclick="selectFighter('Karl')" id="karl" onmouseover="showName('karl');" onmouseout="clearName();" class="fighter-card-btn" href="#" onclick="">
+                                <img onmouseover="$(this).animateCss('pulse');" class="fighter-card" src="img/glad9.jpg">
+                            </button>
+                    </div>
+                    <div class="col-2 ">
+                            <button onclick="selectFighter('Habib')" id="habib" onmouseover="showName('habib');" onmouseout="clearName();" class="fighter-card-btn" href="#" onclick="">
+                                <img onmouseover="$(this).animateCss('pulse');" class="fighter-card" src="img/glad11.jpg">
+                            </button>
+                    </div>
+                    <div class="col-2 ">
+                            <button onclick="selectFighter('Tony')" id="tony" onmouseover="showName('tony');" onmouseout="clearName();" class="fighter-card-btn" href="#" onclick="">
+                                <img onmouseover="$(this).animateCss('pulse');" class="fighter-card" src="img/glad12.jpg">
+                            </button>
+                    </div>
+                    <div class="col-2 ">
+                            <button onclick="selectFighter('Percival')" id="percival" onmouseover="showName('percival');" onmouseout="clearName();" class="fighter-card-btn" href="#" onclick="">
+                                <img onmouseover="$(this).animateCss('pulse');" class="fighter-card" src="img/glad13.jpg">
+                            </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2 ">
+                            <button onclick="selectFighter('Manuel')" id="manuel" onmouseover="showName('manuel');" onmouseout="clearName();" class="fighter-card-btn" href="#" onclick="">
+                                <img onmouseover="$(this).animateCss('pulse');" class="fighter-card" src="img/glad14.jpg">
+                            </button>
+                    </div>
+                    <div class="col-2 ">
+                            <button onclick="selectFighter('Sarina')" id="sarina" onmouseover="showName('sarina');" onmouseout="clearName();" class="fighter-card-btn" href="#" onclick="">
+                                <img onmouseover="$(this).animateCss('pulse');" class="fighter-card" src="img/glad15.jpg">
+                            </button>
+                    </div>
+                    <div class="col-2 ">
+                            <button onclick="selectFighter('Trevor')" id="trevor" onmouseover="showName('trevor');" onmouseout="clearName();" class="fighter-card-btn" href="#" onclick="">
+                                <img onmouseover="$(this).animateCss('pulse');" class="fighter-card" src="img/glad16.jpg">
+                            </button>
+                    </div>
+                    <div class="col-2 ">
+                            <button id="bertram" onmouseover="showName('bertram');" onmouseout="clearName();" class="fighter-card-btn" href="#" onclick="">
+                                <img onmouseover="$(this).animateCss('pulse');" class="fighter-card" src="img/glad1.jpg">
+                            </button>
+                    </div>
+                    <div class="col-2 ">
+                            <button onclick="selectFighter('Lars')" id="lars" onmouseover="showName('lars');" onmouseout="clearName();" class="fighter-card-btn" href="#" onclick="">
+                                <img onmouseover="$(this).animateCss('pulse');" class="fighter-card" src="img/glad21.jpg">
+                            </button>
+                    </div>
+                    <div class="col-2 ">
+                            <button onclick="selectFighter('James')" id="james" onmouseover="showName('james');" onmouseout="clearName();" class="fighter-card-btn" href="#" onclick="">
+                                <img onmouseover="$(this).animateCss('pulse');" class="fighter-card" src="img/glad19.jpg">
+                            </button>
+                    </div>
+                        <!-- <div class="row pd-md">
+                            <div class="col-md-12 text-center">
+
+                            <button id="" onmouseover="" onmouseout="" class="btn btn-lg" href="#" onclick="">
+                                Select
+                            </button>
+
+                            </div>
+                        </div> -->
+                </div>
+                </div>
             </div>
 
-            <br><br>
-
-            <div class="col-md-12 pd-md">
-                <button onclick="updateFighterValues();" type="submit" class="btn btn-lg ">Enter</button>
-            </div>
         </div>
-
-        <!-- fighter box left -->
-    </div>
+         
 </section>
 
+<section class="fighter-name-section">
+    <div class="container">
+        
+            <div class="col-md-12 text-center fighter-names">
+                <div class="row">
+
+                <div class="col-md-5 fighter-names">
+                    <h3>Fighter:</h3>
+                </div>
+
+                <div class="col-md-7 text-center">
+                     <h3 id="display-name"></h3>
+                </div>
+
+               </div>
+            </div>
+        
+    </div>
+</section>
 
 <section class="section-dark">
     <div class="container">
@@ -91,7 +226,7 @@
                 </div>           
             </div>
 
-            <img class="invisible sword" id="sword"  src="img/throw.png">        
+            <img class="invisible sword" id="sword" src="img/throw.png">        
             <img class="invisible sword2" id="sword2" src="img/throw.png">
 
         </div>

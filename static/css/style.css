@@ -42,6 +42,13 @@ color: white;
     color: white;
     font-weight: 600;
 }
+.btn-info {
+    background-color: 00B40A;
+
+}
+.btn-info:hover {
+   background-color: 05FF13 !important;
+}
 .btn:hover {
     background-color: FC7171;
 }
@@ -67,11 +74,44 @@ color: white;
     border-radius: 10%;
 }
 
-
+/* fighter card  section */
+.fighter-card {
+    width: 80px;
+    border-radius: 0;
+    animation-duration: 0.2s !important;
+}
+.fighter-card-btn {
+    padding: 0;
+    border: none;
+    background-color: white;
+}
+.fighter-card-btn:hover {
+    border: 2px solid #00FF00;
+    margin: -2px;
+}
+#fighter-section .row {
+    padding-bottom: 10px;
+}
+.fighter-names {
+    height: 70px;
+    
+}
+/* #display-name {
+    font-size: 65px;
+} */
+.fighter-name-section {
+    background-color: F2C603;
+    padding: 0;
+    padding-bottom: 1.3em;
+    padding-top: 1.3em;
+}
+.fighter-name-section h3 {
+    font-size: 60px;
+}
 img {
-    width: 150px;
+     width: 150px; 
     border: solid 2px white;
-    border-radius: 5px;;
+    border-radius: 5px;
 }
 
 #f1_name, #f1_hitpoints, #f2_name, #f2_hitpoints {
@@ -92,7 +132,7 @@ img {
     color: white;
 }
  input {
-    width: 50%;
+    width: 100%;
     height: 50px;
     font-size: 35px;
 }
