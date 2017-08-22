@@ -14,6 +14,7 @@ var animationTimer = 2000;
 //music objects
 var grunt = new Audio('audio/grunt2.m4a');
 var deadSound = new Audio('audio/dying.m4a');
+var swordClink = new Audio('audio/sword.wav');
 
 //initialize fighters
 var fighter1 = {
@@ -255,13 +256,263 @@ function clearName() {
 function clearFighterInputs(){
   $('#fighter1_name').val('');
   $('#fighter2_name').val('');
+  $('#img-slot1').attr('src', '')
+  $('#img-slot2').attr('src', '')
+  $('#img-slot1').addClass('invisible');
+  $('#img-slot2').addClass('invisible');
 }
 
 function selectFighter(name) {
+  
   if ($('#fighter1_name').val()) {
     $('#fighter2_name').val(name);
+    
   } else {
     $('#fighter1_name').val(name);
+    
   }
+ 
 }
 
+
+//stage fighter img
+$('#bob').on({
+    'click': function(){ 
+      swordClink.play();
+      $('#bob').addClass('invisible');              
+      if ($('#img-slot1').attr('src')) {
+        $('#img-slot2').removeClass('invisible').attr('src','img/bob.jpg').animateCss('flipInY');
+     
+      } else {
+        $('#img-slot1').removeClass('invisible').attr('src','img/bob.jpg').animateCss('flipInY'); 
+          
+      }
+        
+}});
+
+$('#mike').on({
+    'click': function(){
+      swordClink.play(); 
+      $('#mike').addClass('invisible');              
+      if ($('#img-slot1').attr('src')) {
+        $('#img-slot2').removeClass('invisible').attr('src','img/mike.jpg').animateCss('flipInY');
+        
+      } else {
+        $('#img-slot1').removeClass('invisible').attr('src','img/mike.jpg').animateCss('flipInY');     
+      }
+}});
+
+$('#frank').on({
+    'click': function(){
+      swordClink.play();              
+      if ($('#img-slot1').attr('src')) {
+        $('#img-slot2').removeClass('invisible').attr('src','img/frank.jpg').animateCss('flipInY');
+        
+      } else {
+        $('#img-slot1').removeClass('invisible').attr('src','img/frank.jpg').animateCss('flipInY');     
+      }
+}});
+
+$('#detlev').on({
+    'click': function(){
+      swordClink.play();              
+      if ($('#img-slot1').attr('src')) {
+        $('#img-slot2').removeClass('invisible').attr('src','img/detlev.jpg').animateCss('flipInY');
+        
+      } else {
+        $('#img-slot1').removeClass('invisible').attr('src','img/detlev.jpg').animateCss('flipInY');     
+      }
+}});
+
+$('#swen').on({
+    'click': function(){
+      swordClink.play();              
+      if ($('#img-slot1').attr('src')) {
+        $('#img-slot2').removeClass('invisible').attr('src','img/swen.jpg').animateCss('flipInY');
+        
+      } else {
+        $('#img-slot1').removeClass('invisible').attr('src','img/swen.jpg').animateCss('flipInY');     
+      }
+}});
+
+$('#tim').on({
+    'click': function(){
+      swordClink.play();              
+      if ($('#img-slot1').attr('src')) {
+        $('#img-slot2').removeClass('invisible').attr('src','img/tim.jpg').animateCss('flipInY');
+        
+      } else {
+        $('#img-slot1').removeClass('invisible').attr('src','img/tim.jpg').animateCss('flipInY');     
+      }
+}});
+
+$('#ruben').on({
+    'click': function(){
+      swordClink.play();              
+      if ($('#img-slot1').attr('src')) {
+        $('#img-slot2').removeClass('invisible').attr('src','img/ruben.jpg').animateCss('flipInY');
+        
+      } else {
+        $('#img-slot1').removeClass('invisible').attr('src','img/ruben.jpg').animateCss('flipInY');     
+      }
+}});
+
+$('#leela').on({
+    'click': function(){
+      swordClink.play();              
+      if ($('#img-slot1').attr('src')) {
+        $('#img-slot2').removeClass('invisible').attr('src','img/leela.jpg').animateCss('flipInY');
+        
+      } else {
+        $('#img-slot1').removeClass('invisible').attr('src','img/leela.jpg').animateCss('flipInY');     
+      }
+}});
+
+$('#karl').on({
+    'click': function(){
+      swordClink.play();              
+      if ($('#img-slot1').attr('src')) {
+        $('#img-slot2').removeClass('invisible').attr('src','img/karl.jpg').animateCss('flipInY');
+        
+      } else {
+        $('#img-slot1').removeClass('invisible').attr('src','img/karl.jpg').animateCss('flipInY');     
+      }
+}});
+
+$('#habib').on({
+    'click': function(){
+      swordClink.play();              
+      if ($('#img-slot1').attr('src')) {
+        $('#img-slot2').removeClass('invisible').attr('src','img/habib.jpg').animateCss('flipInY');
+        
+      } else {
+        $('#img-slot1').removeClass('invisible').attr('src','img/habib.jpg').animateCss('flipInY');     
+      }
+}});
+
+$('#tony').on({
+    'click': function(){
+      swordClink.play();              
+      if ($('#img-slot1').attr('src')) {
+        $('#img-slot2').removeClass('invisible').attr('src','img/tony.jpg').animateCss('flipInY');
+        
+      } else {
+        $('#img-slot1').removeClass('invisible').attr('src','img/tony.jpg').animateCss('flipInY');     
+      }
+}});
+
+$('#percival').on({
+    'click': function(){
+      swordClink.play();
+                  
+      if ($('#img-slot1').attr('src')) {
+        $('#img-slot2').removeClass('invisible').attr('src','img/percival.jpg').animateCss('flipInY');
+        
+      } else {
+        $('#img-slot1').removeClass('invisible').attr('src','img/percival.jpg').animateCss('flipInY');     
+      }
+}});
+
+$('#manuel').on({
+    'click': function(){
+      swordClink.play();              
+      if ($('#img-slot1').attr('src')) {
+        $('#img-slot2').removeClass('invisible').attr('src','img/manuel.jpg').animateCss('flipInY');
+        
+      } else {
+        $('#img-slot1').removeClass('invisible').attr('src','img/manuel.jpg').animateCss('flipInY');     
+      }
+}});
+
+$('#sarina').on({
+    'click': function(){
+      swordClink.play();              
+      if ($('#img-slot1').attr('src')) {
+        $('#img-slot2').removeClass('invisible').attr('src','img/sarina.jpg').animateCss('flipInY');
+        
+      } else {
+        $('#img-slot1').removeClass('invisible').attr('src','img/sarina.jpg').animateCss('flipInY');     
+      }
+}});
+
+$('#trevor').on({
+    'click': function(){
+      swordClink.play();              
+      if ($('#img-slot1').attr('src')) {
+        $('#img-slot2').removeClass('invisible').attr('src','img/trevor.jpg').animateCss('flipInY');
+        
+      } else {
+        $('#img-slot1').removeClass('invisible').attr('src','img/trevor.jpg').animateCss('flipInY');     
+      }
+}});
+
+$('#bertram').on({
+    'click': function(){
+      swordClink.play();              
+      if ($('#img-slot1').attr('src')) {
+        $('#img-slot2').removeClass('invisible').attr('src','img/bertram.jpg').animateCss('flipInY');
+        
+      } else {
+        $('#img-slot1').removeClass('invisible').attr('src','img/bertram.jpg').animateCss('flipInY');     
+      }
+}});
+
+$('#lars').on({
+    'click': function(){
+      swordClink.play();              
+      if ($('#img-slot1').attr('src')) {
+        $('#img-slot2').removeClass('invisible').attr('src','img/lars.jpg').animateCss('flipInY');
+        
+      } else {
+        $('#img-slot1').removeClass('invisible').attr('src','img/lars.jpg').animateCss('flipInY');     
+      }
+}});
+
+$('#james').on({
+    'click': function(){
+      swordClink.play();              
+      if ($('#img-slot1').attr('src')) {
+        $('#img-slot2').removeClass('invisible').attr('src','img/james.jpg').animateCss('flipInY');
+        
+      } else {
+        $('#img-slot1').removeClass('invisible').attr('src','img/james.jpg').animateCss('flipInY');     
+      }
+}});
+
+function removeStagingImg1() {
+
+  $('#fighter1_name').val('');
+  $('#img-slot1').attr('src', '');
+  $('#img-slot1').addClass('invisible');
+}
+
+function removeStagingImg2() {
+ 
+  $('#fighter2_name').val('');     
+  $('#img-slot2').addClass('invisible');   
+  $('#img-slot2').attr('src', '');
+}
+
+$('#img-slot1').on({
+    'click': function(){
+                   
+      // if ($('#img-slot1').attr('src', 'img/bob.jpg')) {
+      //   $('#bob').removeClass('invisible');
+        
+      // } 
+       if ($('#img-slot1').attr('src', 'img/mike.jpg')) {
+        $('#mike').removeClass('invisible');    
+      }
+}});
+
+$('#img-slot2').on({
+    'click': function(){
+                   
+      // if ($('#img-slot2').attr('src', 'img/bob.jpg')) {
+      //   $('#bob').removeClass('invisible');
+        
+      // } 
+      if ($('#img-slot2').attr('src', 'img/mike.jpg')) {
+        $('#mike').removeClass('invisible');    
+      }
+}});

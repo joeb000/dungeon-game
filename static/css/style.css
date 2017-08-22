@@ -35,6 +35,12 @@ section {
 color: white;
 }
 
+.top {
+    padding-bottom: 1em !important;
+}
+#fighter-stage1, #fighter-stage2 {
+    min-height: 250px;
+}
 /* buttons */
 .btn {
     background-color: FF3030;  
@@ -99,6 +105,18 @@ color: white;
 /* #display-name {
     font-size: 65px;
 } */
+
+
+/* staging section */
+.staging-area {
+    min-height: 220px;
+     padding-top: 0; 
+    padding-bottom: 1em;
+}
+.fighter-staging {
+    width: 140px;
+}
+
 .fighter-name-section {
     background-color: F2C603;
     padding: 0;
